@@ -1,91 +1,270 @@
+/* Import Font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+/* 1. Root Variables (Sesuai Figma) */
 :root {
   --primary-green: #10b981;
   --dark-green: #059669;
-  --darker-green: #047857;
-  --light-gray: #f8f9fa;
-  --text-dark: #222;
-  --text-light: #fff;
-  --border-color: #ddd;
-  --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --dark-text: #1a202c;
+  --light-text: #4a5568;
+  --grey-bg: #f7fafc;
+  --white: #ffffff;
+  --border-color: #e2e8f0;
+  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 
+/* 2. Global Resets */
 * {
   box-sizing: border-box;
-}
-
-body {
-  font-family: "Poppins", sans-serif;
-  background: var(--light-gray);
-  color: var(--text-dark);
   margin: 0;
   padding: 0;
 }
 
-header {
-  /* Ganti URL ini dengan gambar latar yang Anda inginkan */
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("https://images.unsplash.com/photo-1545209675-11425b901116?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzNTU2fDB8MXxzZWFyY2h8NHx8c29sYXIlMjBwYW5lbHN8ZW58MHx8fHwxNzA4NjU1MjQ5fDA&ixlib=rb-4.0.3&q=80&w=1920")
-      no-repeat center center/cover;
-  color: var(--text-light);
-  text-align: center;
-  padding: 5rem 1rem;
-  min-height: 300px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+body {
+  font-family: "Poppins", sans-serif;
+  color: var(--dark-text);
+  background-color: var(--white);
+  line-height: 1.6;
 }
 
-.hero-content {
-  max-width: 600px;
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 600;
+  color: var(--dark-text);
+  line-height: 1.3;
 }
 
 h1 {
-  margin: 0;
-  font-size: 2.5rem;
-  font-weight: 700;
-}
-
-header p {
-  font-size: 1.2rem;
-  font-weight: 300;
-}
-
-section {
-  padding: 3rem 1rem;
-  max-width: 900px;
-  margin: auto;
+  font-size: 3rem; /* 48px */
 }
 
 h2 {
-  color: var(--darker-green);
+  font-size: 2.25rem; /* 36px */
+  margin-bottom: 1.5rem;
   text-align: center;
-  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.25rem; /* 20px */
+}
+
+p {
+  color: var(--light-text);
+  margin-bottom: 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-green);
+}
+
+ul {
+  list-style-type: none;
+}
+
+section {
+  padding: 4rem 0;
+}
+
+.section-subtitle {
+  text-align: center;
+  font-size: 1.1rem;
+  color: var(--light-text);
+  max-width: 600px;
+  margin: 0 auto 2.5rem auto;
+}
+
+/* 3. Tombol (Buttons) */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
   font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.btn-primary {
+  background-color: var(--primary-green);
+  color: var(--white);
+}
+
+.btn-primary:hover {
+  background-color: var(--dark-green);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+
+.btn-secondary {
+  background-color: var(--border-color);
+  color: var(--dark-text);
+}
+
+.btn-secondary:hover {
+  background-color: #cbd5e0;
+}
+
+.btn-whatsapp {
+  background-color: #25d366;
+  color: var(--white);
+  font-size: 1.1rem;
+}
+.btn-whatsapp:hover {
+  background-color: #1da851;
+  box-shadow: var(--shadow);
+}
+
+/* 4. Navbar */
+.navbar {
+  background: var(--white);
+  padding: 1rem 0;
+  box-shadow: var(--shadow);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--dark-text);
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.nav-menu li a {
+  font-weight: 500;
+  color: var(--dark-text);
+  transition: color 0.3s ease;
+}
+
+.nav-menu li a:hover {
+  color: var(--primary-green);
+}
+
+/* 5. Hero Section */
+.hero {
+  background: var(--grey-bg);
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding: 4rem 0;
+}
+
+.hero .container {
+  max-width: 800px;
+}
+
+.hero h1 {
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
   margin-bottom: 2rem;
+}
+
+/* 6. Stats Section */
+#stats {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  text-align: center;
+}
+
+#stats .stat-item h3 {
+  font-size: 2.5rem;
+  color: var(--primary-green);
+}
+#stats .stat-item p {
+  color: var(--light-text);
+  font-weight: 500;
+}
+
+/* 7. About / Why Us Section */
+#about {
+  text-align: center;
+}
+#about .about-content {
+  max-width: 700px;
+  margin: 0 auto 3rem auto;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  text-align: left;
+}
+
+.feature-card {
+  background: var(--white);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 2rem;
+  transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.feature-card i {
+  font-size: 2.5rem;
+  color: var(--primary-green);
+  margin-bottom: 1rem;
+}
+
+/* 8. Services Section */
+.services-section {
+  background: var(--grey-bg);
 }
 
 .service-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1.5rem;
-  margin-top: 1rem;
 }
 
 .card {
-  background: var(--text-light);
+  background: var(--white);
   padding: 2rem;
   border-radius: 12px;
   text-align: center;
   box-shadow: var(--shadow);
-  font-size: 1.1em;
-  font-weight: 600;
-  border-top: 4px solid var(--primary-green);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-bottom: 4px solid var(--primary-green);
+  transition: all 0.3s ease;
 }
 
 .card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow-lg);
 }
 
 .card i {
@@ -95,23 +274,34 @@ h2 {
   margin-bottom: 1rem;
 }
 
-.calculator-box {
-  background: var(--text-light);
-  padding: 2rem;
+.card h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+/* 9. Calculator Section (Desain Baru) */
+.calculator-wrapper {
+  background: var(--white);
   border-radius: 12px;
-  box-shadow: var(--shadow);
-  max-width: 600px;
+  box-shadow: var(--shadow-lg);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  padding: 2.5rem;
+  max-width: 900px;
   margin: 0 auto;
 }
 
 .form-group {
-  margin: 1.5rem 0;
+  margin-bottom: 1.5rem;
 }
 
 .form-group label {
   display: block;
   font-weight: 600;
   margin-bottom: 0.5rem;
+  color: var(--dark-text);
 }
 
 input[type="number"],
@@ -133,36 +323,20 @@ select:focus {
 }
 
 button {
-  background: var(--primary-green);
-  color: var(--text-light);
-  border: none;
-  padding: 1rem 1.5rem;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 1.1rem;
-  font-weight: 600;
   width: 100%;
-  transition: background 0.3s ease;
-}
-
-button:hover {
-  background: var(--dark-green);
+  font-size: 1rem;
+  padding: 0.8rem 1.2rem;
 }
 
 #hasil {
-  margin-top: 2rem;
-  background: var(--text-light);
+  background: var(--grey-bg);
   padding: 2rem;
   border-radius: 12px;
-  box-shadow: var(--shadow);
-  max-width: 600px;
-  margin: 2rem auto 0 auto;
 }
 
 #hasil h3 {
   text-align: center;
-  margin-top: 0;
-  color: var(--darker-green);
+  margin-bottom: 1.5rem;
 }
 
 table {
@@ -172,7 +346,7 @@ table {
 }
 
 td {
-  padding: 0.75rem 0.5rem;
+  padding: 0.8rem 0.5rem;
   border-bottom: 1px solid var(--border-color);
 }
 
@@ -184,52 +358,152 @@ td:first-child {
 td:last-child {
   text-align: right;
   font-weight: 500;
+  color: var(--primary-green);
+  font-size: 1.1rem;
+}
+
+.harga-row td {
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.harga-row td:last-child {
+  color: var(--dark-green);
 }
 
 tr:last-child td {
   border-bottom: none;
 }
 
-#hasil button {
-  font-size: 1rem;
-  padding: 0.8rem 1.2rem;
-}
-
-.wa-btn {
-  display: inline-block;
-  background: #25d366;
-  color: var(--text-light);
-  padding: 1rem 1.5rem;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: background 0.3s ease;
-}
-
-.wa-btn:hover {
-  background: #1da851;
-}
-
-.wa-btn i {
+#hasil button i {
   margin-right: 0.5rem;
 }
 
-#contact {
-  text-align: center;
+/* 10. Testimonials */
+.testimonials-section {
+  background: var(--grey-bg);
 }
 
-footer {
-  text-align: center;
-  background: var(--darker-green);
-  color: var(--text-light);
-  padding: 2rem 1rem;
-  margin-top: 2rem;
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
 }
 
-footer p {
+.testimonial-card {
+  background: var(--white);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+}
+
+.testimonial-card .stars {
+  font-size: 1.2rem;
+  color: #f59e0b; /* Warna bintang */
+  margin-bottom: 1rem;
+}
+
+.testimonial-card p {
+  font-style: italic;
+  color: var(--dark-text);
+  margin-bottom: 1rem;
+}
+
+.testimonial-card span {
+  font-weight: 600;
+  color: var(--light-text);
+}
+
+/* 11. Contact Section */
+.contact-section {
+  text-align: center;
+  background: var(--white);
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 3rem;
+  border-radius: 12px;
+}
+
+/* 12. Footer */
+.footer {
+  background: var(--dark-text);
+  color: #a0aec0;
+  padding-top: 4rem;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  padding-bottom: 3rem;
+}
+
+.footer-col h3 {
+  font-size: 1.5rem;
+  color: var(--white);
+  margin-bottom: 1rem;
+}
+
+.footer-col h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: 1rem;
+}
+
+.footer-col p {
+  color: #a0aec0;
+  margin-bottom: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-col ul li a {
+  color: #a0aec0;
+  transition: color 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+  color: var(--white);
+}
+
+.footer-bottom {
+  border-top: 1px solid #4a5568;
+  padding: 1.5rem 0;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.footer-bottom p {
   margin: 0;
+  color: #a0aec0;
 }
 
+/* 13. Utility & Responsive */
 .hidden {
   display: none;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  .nav-menu {
+    display: none; /* Sederhanakan untuk demo, atau tambahkan menu burger */
+  }
+
+  .calculator-wrapper {
+    grid-template-columns: 1fr;
+    padding: 1.5rem;
+  }
+
+  #hasil {
+    margin-top: 2rem;
+  }
 }
