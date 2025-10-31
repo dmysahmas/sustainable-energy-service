@@ -1,23 +1,19 @@
-// Menunggu hingga seluruh konten HTML dimuat
-document.addEventListener('DOMContentLoaded', () => {
+// File: script.js
+// Ini adalah kode CONTOH untuk fungsionalitas
 
-    // --- Mobile Menu Toggle ---
-    const hamburgerBtn = document.getElementById('hamburger-btn');
-    const navLinks = document.getElementById('nav-links');
+document.addEventListener('DOMContentLoaded', function() {
+    
+    // Temukan tombol play
+    const playButton = document.querySelector('.play-button');
 
-    // Pastikan kedua elemen ada
-    if (hamburgerBtn && navLinks) {
-        hamburgerBtn.addEventListener('click', () => {
-            // Menambah/menghapus kelas 'active' pada daftar tautan
-            navLinks.classList.toggle('active');
+    if (playButton) {
+        playButton.addEventListener('click', function() {
+            // Ganti ini dengan kode untuk membuka modal/popup video
+            alert('Tombol Play diklik! Di sini Anda akan memutar video.');
         });
     }
 
-    // --- Placeholder untuk JS lainnya ---
-    // Anda bisa menambahkan fungsionalitas di sini, seperti:
-    // 1. Validasi formulir untuk newsletter
-    // 2. Efek 'scroll-to-top'
-    // 3. Slider/carousel untuk testimonial
-    console.log("Situs Mentary berhasil dimuat.");
+    // Anda bisa menambahkan kode lain di sini untuk slider,
+    // menu mobile, dll.
 
 });
