@@ -4,56 +4,97 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CV Sustainable Energy Service</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+    rel="stylesheet"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
+  
   <link rel="stylesheet" href="style.css" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 </head>
 <body>
   <header>
-    <h1>CV Sustainable Energy Service</h1>
-    <p>Solusi Energi Terbarukan untuk Masa Depan</p>
+    <div class="hero-content">
+      <h1>CV Sustainable Energy Service</h1>
+      <p>Solusi Energi Terbarukan untuk Masa Depan Anda</p>
+    </div>
   </header>
 
   <section id="services">
     <h2>Layanan Kami</h2>
     <div class="service-container">
-      <div class="card">🔧 Konsultasi</div>
-      <div class="card">⚡ Pemasangan</div>
-      <div class="card">🧰 Maintenance</div>
-      <div class="card">📶 IoT Monitoring</div>
+      <div class="card">
+        <i class="fa-solid fa-comments"></i>
+        <span>Konsultasi</span>
+      </div>
+      <div class="card">
+        <i class="fa-solid fa-solar-panel"></i>
+        <span>Pemasangan</span>
+      </div>
+      <div class="card">
+        <i class="fa-solid fa-screwdriver-wrench"></i>
+        <span>Maintenance</span>
+      </div>
+      <div class="card">
+        <i class="fa-solid fa-wifi"></i>
+        <span>IoT Monitoring</span>
+      </div>
     </div>
   </section>
 
   <section id="calculator">
     <h2>Simulasi Kebutuhan Panel Surya</h2>
-    <div class="form-group">
-      <label>Daya Beban (Watt):</label>
-      <input type="number" id="daya" placeholder="contoh: 2000" />
+    <div class="calculator-box">
+      <div class="form-group">
+        <label>Daya Beban Puncak (Watt):</label>
+        <input type="number" id="daya" placeholder="contoh: 2000" />
+      </div>
+      <div class="form-group">
+        <label>Tegangan Sistem:</label>
+        <select id="tegangan">
+          <option value="12">12V</option>
+          <option value="24">24V</option>
+          <option value="48">48V</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Jenis Sistem:</label>
+        <select id="sistem">
+          <option value="ongrid">On-Grid</option>
+          <option value="offgrid">Off-Grid</option>
+          <option value="hybrid">Hybrid</option>
+        </select>
+      </div>
+      <button onclick="hitungKebutuhan()">Hitung Kebutuhan</button>
     </div>
-    <div class="form-group">
-      <label>Tegangan Sistem:</label>
-      <select id="tegangan">
-        <option value="12">12V</option>
-        <option value="24">24V</option>
-        <option value="48">48V</option>
-      </select>
-    </div>
-    <div class="form-group">
-      <label>Jenis Sistem:</label>
-      <select id="sistem">
-        <option value="ongrid">On-Grid</option>
-        <option value="offgrid">Off-Grid</option>
-        <option value="hybrid">Hybrid</option>
-      </select>
-    </div>
-    <button onclick="hitungKebutuhan()">Hitung Kebutuhan</button>
 
     <div id="hasil" class="hidden">
       <h3>Hasil Perhitungan</h3>
       <table>
-        <tr><td>Kapasitas Panel:</td><td id="panel"></td></tr>
-        <tr><td>Kapasitas Baterai:</td><td id="baterai"></td></tr>
-        <tr><td>Inverter:</td><td id="inverter"></td></tr>
-        <tr><td>Estimasi Harga:</td><td id="harga"></td></tr>
+        <tr>
+          <td>Kapasitas Panel:</td>
+          <td id="panel"></td>
+        </tr>
+        <tr>
+          <td>Kapasitas Baterai:</td>
+          <td id="baterai"></td>
+        </tr>
+        <tr>
+          <td>Inverter:</td>
+          <td id="inverter"></td>
+        </tr>
+        <tr>
+          <td>Estimasi Harga:</td>
+          <td id="harga"></td>
+        </tr>
       </table>
       <button onclick="downloadPDF()">Download RAB PDF</button>
     </div>
@@ -62,11 +103,13 @@
   <section id="contact">
     <h2>Hubungi Kami</h2>
     <p>Ingin berkonsultasi atau memesan layanan? Hubungi kami melalui:</p>
-    <a href="https://wa.me/6281234567890" target="_blank" class="wa-btn">💬 WhatsApp Kami</a>
+    <a href="https://wa.me/6281234567890" target="_blank" class="wa-btn">
+      <i class="fa-brands fa-whatsapp"></i> WhatsApp Kami
+    </a>
   </section>
 
   <footer>
-    <p>© 2025 CV Sustainable Energy Service. All rights reserved.</p>
+    <p>&copy; 2025 CV Sustainable Energy Service. All rights reserved.</p>
   </footer>
 
   <script src="script.js"></script>
