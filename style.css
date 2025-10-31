@@ -1,109 +1,233 @@
+:root {
+  --primary-green: #10b981;
+  --dark-green: #059669;
+  --darker-green: #047857;
+  --light-gray: #f8f9fa;
+  --text-dark: #222;
+  --text-light: #fff;
+  --border-color: #ddd;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: "Poppins", sans-serif;
-  background: #f8f9fa;
-  color: #222;
+  background: var(--light-gray);
+  color: var(--text-dark);
   margin: 0;
   padding: 0;
 }
 
 header {
-  background: linear-gradient(120deg, #34d399, #059669);
-  color: white;
+  /* Ganti URL ini dengan gambar latar yang Anda inginkan */
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("https://images.unsplash.com/photo-1545209675-11425b901116?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzNTU2fDB8MXxzZWFyY2h8NHx8c29sYXIlMjBwYW5lbHN8ZW58MHx8fHwxNzA4NjU1MjQ5fDA&ixlib=rb-4.0.3&q=80&w=1920")
+      no-repeat center center/cover;
+  color: var(--text-light);
   text-align: center;
-  padding: 2rem 1rem;
+  padding: 5rem 1rem;
+  min-height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-content {
+  max-width: 600px;
 }
 
 h1 {
   margin: 0;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+header p {
+  font-size: 1.2rem;
+  font-weight: 300;
 }
 
 section {
-  padding: 2rem 1rem;
-  max-width: 800px;
+  padding: 3rem 1rem;
+  max-width: 900px;
   margin: auto;
 }
 
 h2 {
-  color: #047857;
+  color: var(--darker-green);
   text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
 }
 
 .service-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
   margin-top: 1rem;
 }
 
 .card {
-  background: white;
-  padding: 1rem;
+  background: var(--text-light);
+  padding: 2rem;
   border-radius: 12px;
   text-align: center;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow);
   font-size: 1.1em;
+  font-weight: 600;
+  border-top: 4px solid var(--primary-green);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.card i {
+  display: block;
+  font-size: 2.5rem;
+  color: var(--primary-green);
+  margin-bottom: 1rem;
+}
+
+.calculator-box {
+  background: var(--text-light);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .form-group {
-  margin: 1rem 0;
+  margin: 1.5rem 0;
 }
 
-input, select {
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+input[type="number"],
+select {
   width: 100%;
-  padding: 0.6rem;
-  border: 1px solid #ccc;
+  padding: 0.8rem 1rem;
+  border: 1px solid var(--border-color);
   border-radius: 8px;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  background: #fafafa;
+}
+
+input[type="number"]:focus,
+select:focus {
+  outline: none;
+  border-color: var(--primary-green);
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.2);
 }
 
 button {
-  background: #10b981;
-  color: white;
+  background: var(--primary-green);
+  color: var(--text-light);
   border: none;
-  padding: 0.8rem 1.2rem;
+  padding: 1rem 1.5rem;
   border-radius: 8px;
   cursor: pointer;
-  font-size: 1rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  width: 100%;
+  transition: background 0.3s ease;
 }
 
 button:hover {
-  background: #059669;
+  background: var(--dark-green);
 }
 
 #hasil {
   margin-top: 2rem;
-  background: white;
-  padding: 1rem;
+  background: var(--text-light);
+  padding: 2rem;
   border-radius: 12px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow);
+  max-width: 600px;
+  margin: 2rem auto 0 auto;
+}
+
+#hasil h3 {
+  text-align: center;
+  margin-top: 0;
+  color: var(--darker-green);
 }
 
 table {
   width: 100%;
   border-collapse: collapse;
+  margin-bottom: 1.5rem;
 }
 
 td {
-  padding: 0.5rem 0;
+  padding: 0.75rem 0.5rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+td:first-child {
+  font-weight: 600;
+  color: #333;
+}
+
+td:last-child {
+  text-align: right;
+  font-weight: 500;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+#hasil button {
+  font-size: 1rem;
+  padding: 0.8rem 1.2rem;
 }
 
 .wa-btn {
   display: inline-block;
   background: #25d366;
-  color: white;
-  padding: 0.8rem 1.2rem;
+  color: var(--text-light);
+  padding: 1rem 1.5rem;
   border-radius: 8px;
   text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s ease;
 }
 
 .wa-btn:hover {
   background: #1da851;
 }
 
+.wa-btn i {
+  margin-right: 0.5rem;
+}
+
+#contact {
+  text-align: center;
+}
+
 footer {
   text-align: center;
-  background: #047857;
-  color: white;
-  padding: 1rem;
+  background: var(--darker-green);
+  color: var(--text-light);
+  padding: 2rem 1rem;
+  margin-top: 2rem;
+}
+
+footer p {
+  margin: 0;
 }
 
 .hidden {
