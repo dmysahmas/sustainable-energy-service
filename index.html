@@ -1,234 +1,365 @@
 <!DOCTYPE html>
-<html lang="in">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Renewable Energy Solutions</title>
+    <title>Renewable Energy</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <header class="navbar">
-        <div class="container">
-            <a href="#" class="logo">LOGO</a>
-            <nav>
-                <ul>
-                    <li><a href="#">Solutions</a></li>
-                    <li><a href="#">Projects</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Blog</a></li>
-                </ul>
-            </nav>
-            <a href="#" class="btn btn-primary">Get a Quote</a>
+    <header>
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 3V5M5.63604 5.63604L7.05025 7.05025M3 12H5M5.63604 18.364L7.05025 16.9497M12 21V19M18.364 18.364L16.9497 16.9497M21 12H19M18.364 5.63604L16.9497 7.05025" stroke="#10b981" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                SUSTAINABLE ENERGY SERVICE
+            </a>
+            <div class="hamburger" id="hamburgerBtn">☰</div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#calculator">Kalkulator</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact" class="btn-nav">Contact Us</a></li>
+            </ul>
         </div>
     </header>
 
-    <main>
-
-        <section class="hero">
+    <section class="hero" id="home">
+        <div class="container hero-container">
             <div class="hero-content">
-                <p class="subtitle">Powering a Sustainable Future</p>
-                <h1>Comprehensive Solar Energy Solutions</h1>
-                <a href="#" class="btn btn-secondary">Our Services</a>
+                <h1>Powering a Sustainable Future, One Panel at a Time.</h1>
+                <p>Join the renewable energy revolution. We provide comprehensive solutions to help you save money and save the planet.</p>
+                <div class="hero-buttons">
+                    <button class="btn">Get Started</button>
+                    <button class="btn btn-outline">Learn More</button>
+                </div>
             </div>
-        </section>
+            <div class="hero-image">
+                <img src="img.jpg" alt="Hero Image">
+            </div>
+        </div>
+    </section>
 
-        <section class="services">
-            <div class="container">
-                <div class="services-content">
-                    <h2>Renewable Energy Services in 2023</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    <div class="service-list">
-                        <span>Solar Panels</span>
-                        <span>Wind Turbines</span>
-                        <span>Energy Storage</span>
+    <section class="graph-section">
+        <div class="container">
+            <h2>Renewable Energy Boomed In 2020</h2>
+            <p>National renewable energy capacity additions</p>
+            <div class="graph-container">
+                <div class="graph-placeholder">
+                    <canvas id="renewableChart" style="width:100%; max-width:800px; height:400px;"></canvas>
+                </div>
+                <small>Source: International Energy Agency</small>
+            </div>
+        </div>
+    </section>
+
+    <section class="benefits">
+        <div class="container">
+            <h2>A Positive Impact for Your Home and the Planet</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">💰</div>
+                    <h3>Cost-Effective Solutions</h3>
+                    <p>Save money on your energy bills with our efficient solar technology designed for maximum ROI.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">⚡</div>
+                    <h3>Advanced Technology</h3>
+                    <p>We use the latest Tier-1 solar panels and smart battery systems for reliable power.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🛠️</div>
+                    <h3>Customizable Solutions</h3>
+                    <p>Every home is different. We design a system tailored specifically to your energy needs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="container about-container">
+            <div class="about-image">
+                 <img src="https://placehold.co/600x500/064e3b/ffffff?text=Team+Image" alt="About Us">
+            </div>
+            <div class="about-content">
+                <h2>Building a Brighter Future, Together</h2>
+                <p>Our mission is to accelerate the world's transition to sustainable energy. With a passion for clean energy and a commitment to our customers, we strive to provide the best possible solutions.</p>
+                <div class="about-stats">
+                    <div>
+                        <strong>4.8/5</strong>
+                        <span>Customer Rating</span>
                     </div>
-                    <a href="#" class="btn btn-primary">Learn More</a>
-                </div>
-                <div class="services-image">
-                    <img src="https://via.placeholder.com/450x500.png?text=Wind+Turbine+Image" alt="Wind Turbine">
-                </div>
-            </div>
-        </section>
-
-        <section class="impact">
-            <div class="container">
-                <h2>A Positive Impact to Your Home and the Planet</h2>
-                <div class="impact-logos">
-                    <span>LOGO 1</span>
-                    <span>LOGO 2</span>
-                    <span>LOGO 3</span>
-                </div>
-                <div class="video-placeholder">
-                    <img src="https://via.placeholder.com/900x500.png?text=Solar+Panel+Video+Still" alt="Solar Panels">
-                    <div class="play-button">
-                        <i class="fas fa-play"></i>
+                    <div>
+                        <strong>300+</strong>
+                        <span>Projects Complete</span>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section class="future">
-            <div class="container">
-                <div class="future-image">
-                    <img src="https://via.placeholder.com/500x400.png?text=Future+Energy+Image" alt="Solar sunset">
-                </div>
-                <div class="future-content">
-                    <h2>Powering a Brighter Future Together</h2>
-                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.</p>
-                    <ul>
-                        <li><i class="fas fa-check-circle"></i> High-Efficiency Panels</li>
-                        <li><i class="fas fa-check-circle"></i> Professional Installation</li>
-                        <li><i class="fas fa-check-circle"></i> Long-term Savings</li>
-                    </ul>
-                    <a href="#" class="btn btn-primary">Get Started</a>
-                </div>
-            </div>
-        </section>
-
-        <section class="solutions dark-bg">
-            <div class="container">
-                <h2>Comprehensive Renewable Energy Solutions</h2>
-                <div class="solutions-grid">
-                    <div class="solution-card">
-                        <i class="fas fa-solar-panel fa-2x"></i>
+    <section class="services" id="services">
+        <div class="container">
+            <h2>Comprehensive Renewable Energy Solutions</h2>
+            <p class="section-subtitle">We offer a range of services to help you take advantage of solar energy and reduce your carbon footprint.</p>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="https://placehold.co/400x250/10b981/ffffff?text=Installation" alt="Installation">
+                    </div>
+                    <div class="service-content">
                         <h3>Solar Panel Installation</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        <a href="#">Learn More &rarr;</a>
-                    </div>
-                    <div class="solution-card">
-                        <i class="fas fa-wind fa-2x"></i>
-                        <h3>Wind Turbine Solutions</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        <a href="#">Learn More &rarr;</a>
-                    </div>
-                    <div class="solution-card">
-                        <i class="fas fa-car-battery fa-2x"></i>
-                        <h3>Energy Storage</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        <a href="#">Learn More &rarr;</a>
+                        <p>Professional installation by certified engineers ensuring maximum efficiency.</p>
+                        <a href="#" class="learn-more">Learn More →</a>
                     </div>
                 </div>
-            </div>
-        </section>
-
-        <section class="stats dark-bg">
-            <div class="container">
-                <div class="stat-item">
-                    <h3>15+</h3>
-                    <p>Years of Experience</p>
-                </div>
-                <div class="stat-item">
-                    <h3>45k+</h3>
-                    <p>Projects Completed</p>
-                </div>
-                <div class="stat-item">
-                    <h3>20k+</h3>
-                    <p>Happy Customers</p>
-                </div>
-                <div class="stat-item">
-                    <h3>1.2M+</h3>
-                    <p>Tons of CO2 Saved</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="projects">
-            <div class="container">
-                <div class="projects-header">
-                    <h2>Recent Projects</h2>
-                    <a href="#" class="btn btn-secondary">View All Projects</a>
-                </div>
-                <div class="projects-grid">
-                    <img src="https://via.placeholder.com/350x300.png?text=Project+1" alt="Project 1">
-                    <img src="https://via.placeholder.com/350x300.png?text=Project+2" alt="Project 2">
-                    <img src="https://via.placeholder.com/350x300.png?text=Project+3" alt="Project 3">
-                    <img src="https://via.placeholder.com/350x300.png?text=Project+4" alt="Project 4">
-                    <img src="https://via.placeholder.com/350x300.png?text=Project+5" alt="Project 5">
-                    <img src="https://via.placeholder.com/350x300.png?text=Project+6" alt="Project 6">
-                </div>
-            </div>
-        </section>
-
-        <section class="testimonials dark-bg">
-            <div class="container">
-                <h2>Happy Customers, Happy Planet</h2>
-                <div class="testimonials-grid">
-                    <div class="testimonial-card">
-                        <div class="stars">
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                        </div>
-                        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuer erat a ante."</p>
-                        <h4>- John D.</h4>
-                        <span>Homeowner</span>
+                <div class="service-card">
+                    <div class="service-img">
+                         <img src="https://placehold.co/400x250/34d399/ffffff?text=Consultation" alt="Consultation">
                     </div>
-                    <div class="testimonial-card">
-                        <div class="stars">
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                        </div>
-                        <p>"Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."</p>
-                        <h4>- Sarah L.</h4>
-                        <span>Business Owner</span>
+                    <div class="service-content">
+                        <h3>Solar Panel Consultation</h3>
+                        <p>Free on-site assessment to determine the best solar setup for your property.</p>
+                        <a href="#" class="learn-more">Learn More →</a>
                     </div>
-                    <div class="testimonial-card">
-                        <div class="stars">
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                        </div>
-                        <p>"Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."</p>
-                        <h4>- Mike R.</h4>
-                        <span>Contractor</span>
+                </div>
+                <div class="service-card">
+                    <div class="service-img">
+                         <img src="https://placehold.co/400x250/059669/ffffff?text=Maintenance" alt="Maintenance">
+                    </div>
+                    <div class="service-content">
+                        <h3>Solar Panel Maintenance</h3>
+                        <p>Regular check-ups and cleaning to keep your system running at peak performance.</p>
+                        <a href="#" class="learn-more">Learn More →</a>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-    </main>
+    <section class="services" id="calculator" style="background-color: var(--white);">
+        <div class="container">
+            <h2>Kalkulator Potensi Panel Surya</h2>
+            <p class="section-subtitle">Hitung potensi penghematan dan waktu balik modal Anda dengan sistem PLTS On-Grid (tersambung PLN).</p>
 
-    <footer class="footer dark-bg">
+            <form class="rab-form" id="roiForm">
+                <div class="form-grid">
+                    
+                    <div class="form-group">
+                        <label for="tagihanBulanan">1. Rata-rata Tagihan Listrik Bulanan (Rp)</label>
+                        <input type="number" id="tagihanBulanan" placeholder="Contoh: 1500000" required>
+                        <small>Masukkan total tagihan Anda sebelum pajak & admin.</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="golonganListrik">2. Golongan Listrik Anda</label>
+                        <select id="golonganListrik" required>
+                            <option value="">-- Pilih Golongan Listrik --</option>
+                            <option value="R1-1300">Rumah Tangga R-1 (1.300 VA)</option>
+                            <option value="R1-2200">Rumah Tangga R-1 (2.200 VA)</option>
+                            <option value="R2-3500">Rumah Tangga R-2 (3.500 - 5.500 VA)</option>
+                            <option value="R3-6600">Rumah Tangga R-3 (6.600 VA ke atas)</option>
+                            <option value="B2">Bisnis B-2 (Tarif Tunggal)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="tipeAtap">3. Jenis Atap</label>
+                        <select id="tipeAtap" required>
+                            <option value="">-- Pilih Jenis Atap --</option>
+                            <option value="metal">Atap Metal (Spandek/Seng) - Paling Mudah</option>
+                            <option value="genteng">Atap Genteng (Tanah liat/Keramik)</option>
+                            <option value="dak">Dak Beton (Cor) - Butuh Struktur Tambahan</option>
+                        </select>
+                    </div>
+
+                </div>
+                <button type="submit" class="btn">Hitung Potensi Saya</button>
+            </form>
+
+            <div id="roiResult" class="roi-result" style="display: none;">
+                
+                <div class="roi-result-grid">
+                    
+                    <div class="roi-metric-card">
+                        <label>Rekomendasi Sistem</label>
+                        <h3 id="result-kwp">0 kWp</h3>
+                    </div>
+                    
+                    <div class="roi-metric-card">
+                        <label>Estimasi Biaya Instalasi</label>
+                        <h3 id="result-biaya">Rp 0</h3>
+                    </div>
+
+                    <div class="roi-metric-card">
+                        <label>Estimasi Produksi / Bulan</label>
+                        <h3 id="result-produksi-kwh">0 kWh</h3>
+                    </div>
+
+                    <div class="roi-metric-card primary">
+                        <label>Potensi Penghematan / Bulan</label>
+                        <h3 id="result-hemat-bulan">Rp 0</h3>
+                    </div>
+                    
+                    <div class="roi-metric-card primary">
+                        <label>Waktu Balik Modal (ROI)</label>
+                        <h3 id="result-roi-tahun">0 Tahun</h3>
+                    </div>
+
+                    <div class="roi-metric-card primary">
+                        <label>Penghematan 25 Tahun</label>
+                        <h3 id="result-hemat-25th">Rp 0</h3>
+                    </div>
+
+                </div>
+                
+                <small class="rab-disclaimer">
+                    *Estimasi ini adalah perkiraan untuk sistem **On-Grid** berdasarkan asumsi PSH rata-rata 4.5 jam/hari dan kenaikan tarif 5% per tahun. Harga aktual dapat bervariasi tergantung survei lokasi dan merek komponen.
+                </small>
+            </div>
+
+        </div>
+    </section>
+    <section class="portfolio" id="projects">
+    <div class="container-fluid">
+        <div class="container">
+            <h2>Recent Projects</h2>
+            <p class="section-subtitle">Check out some of our latest installations and projects.</p>
+        </div>
+        
+        <div class="marquee-container" id="marqueeContainer">
+            
+            <div class="marquee-content" id="marqueeContent">
+                
+                <div class="project-item" onclick="openModal('portfolio_1.jpg', 'Residential Solar', 'Instalasi panel surya untuk perumahan hemat energi, mengurangi tagihan listrik hingga 40%.')">
+                    <img src="portfolio_1.jpg" alt="Project 1">
+                    <div class="project-info">Residential Solar</div>
+                </div>
+
+                <div class="project-item" onclick="openModal('portfolio_2.jpg', 'Commercial Rooftop', 'Sistem atap komersial kapasitas 50kWp untuk efisiensi operasional pabrik tekstil.')">
+                    <img src="portfolio_2.jpg" alt="Project 2">
+                    <div class="project-info">Commercial Rooftop</div>
+                </div>
+
+                <div class="project-item" onclick="openModal('portfolio_3.jpg', 'Solar Farm Maint.', 'Layanan pemeliharaan rutin termasuk pembersihan panel dan inspeksi termal untuk ladang surya.')">
+                    <img src="portfolio_3.jpg" alt="Project 3">
+                    <div class="project-info">Solar Farm Maint.</div>
+                </div>
+
+                <div class="project-item" onclick="openModal('portfolio_4.jpeg', 'Off-Grid Cabin', 'Solusi energi mandiri lengkap dengan baterai untuk lokasi terpencil tanpa akses PLN.')">
+                    <img src="portfolio_4.jpeg" alt="Project 4">
+                    <div class="project-info">Off-Grid Cabin</div>
+                </div>
+
+                <div class="project-item" onclick="openModal('portfolio_5.jpg', 'City Installation', 'Instalasi penerangan jalan umum tenaga surya untuk meningkatkan keamanan taman kota.')">
+                    <img src="portfolio_5.jpg" alt="Project 5">
+                    <div class="project-info">City Installation</div>
+                </div>
+                <div class="project-item" onclick="openModal('portfolio_1.jpg', 'Residential Solar', 'Instalasi panel surya untuk perumahan hemat energi, mengurangi tagihan listrik hingga 40%.')">
+                    <img src="portfolio_1.jpg" alt="Project 1">
+                    <div class="project-info">Residential Solar</div>
+                </div>
+                <div class="project-item" onclick="openModal('portfolio_2.jpg', 'Commercial Rooftop', 'Sistem atap komersial kapasitas 50kWp untuk efisiensi operasional pabrik tekstil.')">
+                    <img src="portfolio_2.jpg" alt="Project 2">
+                    <div class="project-info">Commercial Rooftop</div>
+                </div>
+                <div class="project-item" onclick="openModal('portfolio_3.jpg', 'Solar Farm Maint.', 'Layanan pemeliharaan rutin termasuk pembersihan panel dan inspeksi termal untuk ladang surya.')">
+                    <img src="portfolio_3.jpg" alt="Project 3">
+                    <div class="project-info">Solar Farm Maint.</div>
+                </div>
+                <div class="project-item" onclick="openModal('portfolio_4.jpeg', 'Off-Grid Cabin', 'Solusi energi mandiri lengkap dengan baterai untuk lokasi terpencil tanpa akses PLN.')">
+                    <img src="portfolio_4.jpeg" alt="Project 4">
+                    <div class="project-info">Off-Grid Cabin</div>
+                </div>
+                <div class="project-item" onclick="openModal('portfolio_5.jpg', 'City Installation', 'Instalasi penerangan jalan umum tenaga surya untuk meningkatkan keamanan taman kota.')">
+                    <img src="portfolio_5.jpg" alt="Project 5">
+                    <div class="project-info">City Installation</div>
+                </div>
+                </div>
+        </div>
+    </div>
+</section>
+
+<div id="projectModal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal" onclick="closeModal()">&times;</span>
+        
+        <img id="modalImage" src="" alt="Project Detail">
+        
+        <div class="modal-text">
+            <h3 id="modalTitle"></h3>
+            <p id="modalDescription"></p>
+        </div>
+    </div>
+</div>
+
+    <section class="testimonials">
+        <div class="container">
+            <h2>Happy Customers, Happy World</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"Efficient and Professional Team! The entire process from consultation to installation was seamless."</p>
+                    <div class="testimonial-author">- Alex J.</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"Smooth and Hassle-Free Process! I started saving on my electricity bill from day one."</p>
+                    <div class="testimonial-author">- Sarah M.</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"Excellent Customer Service from Sustainable Energy Service! They answered all my questions patiently."</p>
+                    <div class="testimonial-author">- David P.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
         <div class="container">
             <div class="footer-grid">
-                <div class="footer-col">
-                    <a href="#" class="logo">LOGO</a>
-                    <p>Powering a sustainable tomorrow, today.</p>
-                    <div class="social-icons">
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                    </div>
+                <div class="footer-about">
+                    <a href="#" class="footer-logo">SUSTAINABLE ENERGY SERVICE</a>
+                    <p>Committed to a sustainable future through accessible renewable energy solutions for everyone.</p>
                 </div>
-                <div class="footer-col">
-                    <h4>Quick Links</h4>
+                <div class="footer-links">
+                    <h4>Services</h4>
                     <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Services</a></li>
-                        <li><a href="#">Projects</a></li>
+                        <li><a href="#">Installation</a></li>
+                        <li><a href="#">Maintenance</a></li>
+                        <li><a href="#">Consultation</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
                         <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Contact</a></li>
                     </ul>
                 </div>
-                <div class="footer-col">
-                    <h4>Contact</h4>
-                    <ul>
-                        <li><a href="#">Contact Us</a></li>
-                        <li><a href="#">Get a Quote</a></li>
-                        <li><a href="#">FAQ</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
+                <div class="footer-newsletter">
                     <h4>Newsletter</h4>
-                    <p>Stay updated with our latest news.</p>
+                    <p>Subscribe to get latest updates and offers.</p>
                     <form class="newsletter-form">
-                        <input type="email" placeholder="Enter your email">
-                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit" class="btn">Subscribe</button>
                     </form>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Renewable Energy Co. All rights reserved.</p>
+            <div class="copyright">
+                <p>Copyright © 2025 Sustainable Energy Service. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 </html>
