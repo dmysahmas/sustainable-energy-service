@@ -30,12 +30,118 @@
         </div>
     </header>
 
-    <section class="hero" id="home">...</section>
-    <section class="graph-section">...</section>
-    <section class="benefits">...</section>
-    <section class="about" id="about">...</section>
-    <section class="services" id="services">...</section>
+    <section class="hero" id="home">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <h1>Powering a Sustainable Future, One Panel at a Time.</h1>
+                <p>Join the renewable energy revolution. We provide comprehensive solutions to help you save money and save the planet.</p>
+                <div class="hero-buttons">
+                    <button class="btn">Get Started</button>
+                    <button class="btn btn-outline">Learn More</button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="img.jpg" alt="Hero Image">
+            </div>
+        </div>
+    </section>
 
+    <section class="graph-section">
+        <div class="container">
+            <h2>Renewable Energy Boomed In 2020</h2>
+            <p>National renewable energy capacity additions</p>
+            <div class="graph-container">
+                <div class="graph-placeholder">
+                    <canvas id="renewableChart" style="width:100%; max-width:800px; height:400px;"></canvas>
+                </div>
+                <small>Source: International Energy Agency</small>
+            </div>
+        </div>
+    </section>
+
+    <section class="benefits">
+        <div class="container">
+            <h2>A Positive Impact for Your Home and the Planet</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">💰</div>
+                    <h3>Cost-Effective Solutions</h3>
+                    <p>Save money on your energy bills with our efficient solar technology designed for maximum ROI.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">⚡</div>
+                    <h3>Advanced Technology</h3>
+                    <p>We use the latest Tier-1 solar panels and smart battery systems for reliable power.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🛠️</div>
+                    <h3>Customizable Solutions</h3>
+                    <p>Every home is different. We design a system tailored specifically to your energy needs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="container about-container">
+            <div class="about-image">
+                 <img src="https://placehold.co/600x500/064e3b/ffffff?text=Team+Image" alt="About Us">
+            </div>
+            <div class="about-content">
+                <h2>Building a Brighter Future, Together</h2>
+                <p>Our mission is to accelerate the world's transition to sustainable energy. With a passion for clean energy and a commitment to our customers, we strive to provide the best possible solutions.</p>
+                <div class="about-stats">
+                    <div>
+                        <strong>4.8/5</strong>
+                        <span>Customer Rating</span>
+                    </div>
+                    <div>
+                        <strong>300+</strong>
+                        <span>Projects Complete</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services" id="services">
+        <div class="container">
+            <h2>Comprehensive Renewable Energy Solutions</h2>
+            <p class="section-subtitle">We offer a range of services to help you take advantage of solar energy and reduce your carbon footprint.</p>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="https://placehold.co/400x250/10b981/ffffff?text=Installation" alt="Installation">
+                    </div>
+                    <div class="service-content">
+                        <h3>Solar Panel Installation</h3>
+                        <p>Professional installation by certified engineers ensuring maximum efficiency.</p>
+                        <a href="#" class="learn-more">Learn More →</a>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-img">
+                         <img src="https://placehold.co/400x250/34d399/ffffff?text=Consultation" alt="Consultation">
+                    </div>
+                    <div class="service-content">
+                        <h3>Solar Panel Consultation</h3>
+                        <p>Free on-site assessment to determine the best solar setup for your property.</p>
+                        <a href="#" class="learn-more">Learn More →</a>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-img">
+                         <img src="https://placehold.co/400x250/059669/ffffff?text=Maintenance" alt="Maintenance">
+                    </div>
+                    <div class="service-content">
+                        <h3>Solar Panel Maintenance</h3>
+                        <p>Regular check-ups and cleaning to keep your system running at peak performance.</p>
+                        <a href="#" class="learn-more">Learn More →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <section class="calculator-section" id="calculator">
         <div class="container">
@@ -65,7 +171,7 @@
                                 <option value="Rumah Tangga">Rumah Tangga</option>
                                 <option value="Bisnis">Bisnis</option>
                                 <option value="Industri">Industri</option>
-                                </select>
+                            </select>
                             
                             <label for="calc-tarif">Pilih Kapasitas Tarif PLN (VA)</label>
                             <select id="calc-tarif" disabled>
@@ -215,10 +321,139 @@
 
         </div>
     </section>
-    <section class="portfolio" id="projects">...</section>
-    <div id="projectModal" class="modal">...</div>
-    <section class="testimonials">...</section>
-    <footer id="contact">...</footer>
+    <section class="portfolio" id="projects">
+    <div class="container-fluid">
+        <div class="container">
+            <h2>Recent Projects</h2>
+            <p class="section-subtitle">Check out some of our latest installations and projects.</p>
+        </div>
+        
+        <div class="marquee-container" id="marqueeContainer">
+            
+            <div class="marquee-content" id="marqueeContent">
+                
+                <div class="project-item" onclick="openModal('portfolio_1.jpg', 'Residential Solar', 'Instalasi panel surya untuk perumahan hemat energi, mengurangi tagihan listrik hingga 40%.')">
+                    <img src="portfolio_1.jpg" alt="Project 1">
+                    <div class="project-info">Residential Solar</div>
+                </div>
+
+                <div class="project-item" onclick="openModal('portfolio_2.jpg', 'Commercial Rooftop', 'Sistem atap komersial kapasitas 50kWp untuk efisiensi operasional pabrik tekstil.')">
+                    <img src="portfolio_2.jpg" alt="Project 2">
+                    <div class="project-info">Commercial Rooftop</div>
+                </div>
+
+                <div class="project-item" onclick="openModal('portfolio_3.jpg', 'Solar Farm Maint.', 'Layanan pemeliharaan rutin termasuk pembersihan panel dan inspeksi termal untuk ladang surya.')">
+                    <img src="portfolio_3.jpg" alt="Project 3">
+                    <div class="project-info">Solar Farm Maint.</div>
+                </div>
+
+                <div class="project-item" onclick="openModal('portfolio_4.jpeg', 'Off-Grid Cabin', 'Solusi energi mandiri lengkap dengan baterai untuk lokasi terpencil tanpa akses PLN.')">
+                    <img src="portfolio_4.jpeg" alt="Project 4">
+                    <div class="project-info">Off-Grid Cabin</div>
+                </div>
+
+                <div class="project-item" onclick="openModal('portfolio_5.jpg', 'City Installation', 'Instalasi penerangan jalan umum tenaga surya untuk meningkatkan keamanan taman kota.')">
+                    <img src="portfolio_5.jpg" alt="Project 5">
+                    <div class="project-info">City Installation</div>
+                </div>
+                <div class="project-item" onclick="openModal('portfolio_1.jpg', 'Residential Solar', 'Instalasi panel surya untuk perumahan hemat energi, mengurangi tagihan listrik hingga 40%.')">
+                    <img src="portfolio_1.jpg" alt="Project 1">
+                    <div class="project-info">Residential Solar</div>
+                </div>
+                <div class="project-item" onclick="openModal('portfolio_2.jpg', 'Commercial Rooftop', 'Sistem atap komersial kapasitas 50kWp untuk efisiensi operasional pabrik tekstil.')">
+                    <img src="portfolio_2.jpg" alt="Project 2">
+                    <div class="project-info">Commercial Rooftop</div>
+                </div>
+                <div class="project-item" onclick="openModal('portfolio_3.jpg', 'Solar Farm Maint.', 'Layanan pemeliharaan rutin termasuk pembersihan panel dan inspeksi termal untuk ladang surya.')">
+                    <img src="portfolio_3.jpg" alt="Project 3">
+                    <div class="project-info">Solar Farm Maint.</div>
+                </div>
+                <div class="project-item" onclick="openModal('portfolio_4.jpeg', 'Off-Grid Cabin', 'Solusi energi mandiri lengkap dengan baterai untuk lokasi terpencil tanpa akses PLN.')">
+                    <img src="portfolio_4.jpeg" alt="Project 4">
+                    <div class="project-info">Off-Grid Cabin</div>
+                </div>
+                <div class="project-item" onclick="openModal('portfolio_5.jpg', 'City Installation', 'Instalasi penerangan jalan umum tenaga surya untuk meningkatkan keamanan taman kota.')">
+                    <img src="portfolio_5.jpg" alt="Project 5">
+                    <div class="project-info">City Installation</div>
+                </div>
+                </div>
+        </div>
+    </div>
+</section>
+
+<div id="projectModal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal" onclick="closeModal()">&times;</span>
+        
+        <img id="modalImage" src="" alt="Project Detail">
+        
+        <div class="modal-text">
+            <h3 id="modalTitle"></h3>
+            <p id="modalDescription"></p>
+        </div>
+    </div>
+</div>
+
+    <section class="testimonials">
+        <div class="container">
+            <h2>Happy Customers, Happy World</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"Efficient and Professional Team! The entire process from consultation to installation was seamless."</p>
+                    <div class="testimonial-author">- Alex J.</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"Smooth and Hassle-Free Process! I started saving on my electricity bill from day one."</p>
+                    <div class="testimonial-author">- Sarah M.</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"Excellent Customer Service from Sustainable Energy Service! They answered all my questions patiently."</p>
+                    <div class="testimonial-author">- David P.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <a href="#" class="footer-logo">SUSTAINABLE ENERGY SERVICE</a>
+                    <p>Committed to a sustainable future through accessible renewable energy solutions for everyone.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#">Installation</a></li>
+                        <li><a href="#">Maintenance</a></li>
+                        <li><a href="#">Consultation</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-newsletter">
+                    <h4>Newsletter</h4>
+                    <p>Subscribe to get latest updates and offers.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit" class="btn">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>Copyright © 2025 Sustainable Energy Service. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
 
     <script src="script.js"></script>
 </body>
